@@ -1,0 +1,37 @@
+@import '../../css/colors.scss';
+
+form {
+  button {
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    background-color: $secondary;
+    color: $tertiary;
+    border: none;
+    @media (max-width: 435px) {
+      width: 60px;
+    }
+    &.reset {
+      border: 1px solid $primary;
+      border-right: 1px dashed $tertiary;
+    }
+    &.submit {
+      border: 1px solid $primary;
+      background-color: $tertiary;
+      color: $secondary;
+      border-left: none;
+    }
+  }
+  input {
+    padding: 0rem 0.6rem;
+    outline: none;
+    border: 1px solid $primary;
+    border-right: none;
+    border-left: none;
+    height: 38px;
+    width: 320px;
+    @media (max-width: 600px) {
+      width: auto;
+    }
+  }
+}

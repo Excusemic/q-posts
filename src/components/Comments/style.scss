@@ -1,0 +1,22 @@
+@import '../../css/colors.scss', '../../css/position.scss';
+
+.comments {
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  .comment {
+    padding: 1rem;
+    border-bottom: 1px solid grey;
+    h5 {
+      margin-bottom: 0.4rem;
+    }
+    h6 {
+      font-size: 12px;
+      margin-top: 0rem;
+    }
+  }
+}
+.comments.active {
+  height: 300px;
+  overflow-y: scroll;
+}

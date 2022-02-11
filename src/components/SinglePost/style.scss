@@ -1,0 +1,30 @@
+@import '../../css/colors.scss', '../../css/position.scss';
+
+.singlePost {
+  max-width: 700px;
+  margin: 2rem 10px;
+  border-bottom: 1px solid grey;
+  .info {
+    cursor: pointer;
+  }
+  h1.title {
+    @include cropText(85px, 2);
+  }
+  p.body {
+    margin: 0rem;
+    @include cropText(40px, 2);
+  }
+  p.by {
+    span {
+      font-weight: bold;
+    }
+  }
+  .postFooter {
+    padding-top: 1rem;
+    @include flex(row, space-between, center);
+    h4 {
+      margin: 0rem;
+      cursor: pointer;
+    }
+  }
+}
