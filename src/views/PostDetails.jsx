@@ -65,17 +65,14 @@ function PostDetails({ greet }) {
     );
   };
   useEffect(() => {
-    if (id) {
-      handleFetchPost()
-        .then((resp) => {
-          setPageState({ loading: false, error: false, data: resp.data.data?.[0] });
-        })
-        .catch((err) => {
-          setPageState({ loading: false, error: true, data: null });
-          console.log(err);
-        });
-    }
-    return setPageState({ loading: false, error: false, data: null });
+    handleFetchPost()
+      .then((resp) => {
+        return setPageState({ loading: false, error: false, data: resp.data.data?.[0] });
+      })
+      .catch((err) => {
+        console.log(err);
+        return setPageState({ loading: false, error: true, data: null });
+      });
   }, []);
   if (pageState.error) {
     return 'Something went wrong...';
