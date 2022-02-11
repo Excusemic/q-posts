@@ -14,4 +14,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 To run built version:
 
 1. `npm install -g serve`
-2. `npm -s -g build`
+2. `npm -s build`
